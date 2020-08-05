@@ -63,3 +63,8 @@ Now we have to take into account that git can't tell which SSH key to use. So we
 # Will work
 git clone git@gitlab.com-svefre:svefre/repo.git
 ```
+
+## Further reading
+
+* <https://gist.github.com/jexchan/2351996>
+* <https://stackoverflow.com/questions/9672975/switching-between-multiple-ssh-keys-in-git-on-windows>
