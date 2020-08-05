@@ -50,18 +50,32 @@ Host gitlab.com-fremue85
 
 ## Cloning a repository
 
-Normally we would clone a repo only by copying its repo URL (from web GUI) and executing:
+Normally we would clone a repository only by copying its repository URL (from web GUI) and executing:
 
 ```bash
 # Will fail
-git clone git@gitlab.com:svefre/repo.git
+git clone git@gitlab.com:svefre/repository.git
 ```
 
-Now we have to take into account that git can't tell which SSH key to use. So we have to specify it when cloning a repo:
+Now we have to take into account that git can't tell which SSH key to use. So we have to specify it when cloning a repository:
 
 ```bash
 # Will work
-git clone git@gitlab.com-svefre:svefre/repo.git
+git clone git@gitlab.com-svefre:svefre/repository.git
+```
+
+## Working with existing repository
+
+```bash
+cd existing-repository/.git
+vi config
+```
+
+Change the `url` entry of `[remote "origin"]` section accordingly
+
+```bash
+[remote "origin"]
+    url = git@github.com-svefre:svefre/multiple-ssh-keys.git
 ```
 
 ## Further reading
