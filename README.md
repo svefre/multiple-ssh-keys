@@ -1,6 +1,6 @@
 # Using multiple SSH keys for diffenrent users
 
-> Tested with WSL2 Ubuntu 20.04 on Windows 10 Professional
+> Tested with WSL2 Ubuntu 20.04 on Windows 10 Professional (Version 2004, OS Build 19041.388)
 
 Since GitHub, GitLab etc. don't allow the usage of the same SSH key for multiple accounts, we have to use mutitple SSH keys.
 
@@ -74,6 +74,11 @@ vi .git/config
 Change the `url` entry of `[remote "origin"]` section accordingly
 
 ```bash
+# From
+[remote "origin"]
+    url = git@github.com:user1/repository.git
+
+# To
 [remote "origin"]
     url = git@github.com-user1:user1/repository.git
 ```
